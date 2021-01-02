@@ -30,7 +30,7 @@ function jsToXmlFile(filename, obj, cb) {
   fs.unlinkSync(filepath);
   fs.writeFile(filepath, xml, cb);
 }
-
+//Create antoher root point to the root of the website
 router.get('/', function(req, res) {
 
     res.render('index');
@@ -41,8 +41,8 @@ router.get('/get/html', function(req, res) {
 
     res.writeHead(200, {'Content-Type': 'text/html'}); //We are responding to the client that the content served back is HTML and the it exists (code 200)
 
-    var xml = fs.readFileSync('PaddysCafe.xml', 'utf8'); //We are reading in the XML file
-    var xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8'); //We are reading in the XSL file
+    var xml = fs.readFileSync('RockingGroomers.xml', 'utf8'); //We are reading in the XML file
+    var xsl = fs.readFileSync('RockingGroomers.xsl', 'utf8'); //We are reading in the XSL file
 
     var doc = xmlParse(xml); //Parsing our XML file
     var stylesheet = xmlParse(xsl); //Parsing our XSL file
@@ -59,14 +59,14 @@ router.post('/post/json', function (req, res) {
 
         console.log(obj)
 
-        xmlFileToJs('PaddysCafe.xml', function (err, result) {
+        xmlFileToJs('RockingGroomers.xml', function (err, result) {
             if (err) throw (err);
             
             result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
-            jsToXmlFile('PaddysCafe.xml', result, function(err){
+            jsToXmlFile('RockingGroomers.xml', result, function(err){
                 if (err) console.log(err);
             });
         });
@@ -84,14 +84,14 @@ router.post('/post/delete', function (req, res) {
 
         console.log(obj)
 
-        xmlFileToJs('PaddysCafe.xml', function (err, result) {
+        xmlFileToJs('RockingGroomers.xml', function (err, result) {
             if (err) throw (err);
             
             delete result.cafemenu.section[obj.section].entree[obj.entree];
 
             console.log(JSON.stringify(result, null, "  "));
 
-            jsToXmlFile('PaddysCafe.xml', result, function(err){
+            jsToXmlFile('RockingGroomers.xml', result, function(err){
                 if (err) console.log(err);
             });
         });
