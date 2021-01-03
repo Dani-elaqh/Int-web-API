@@ -30,15 +30,12 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="index.html">Home
                             <span class="sr-only">You are here!</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -51,16 +48,32 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 md-5 text-center">
                 <h1 class="mt-5">Welcome to Rocking Groomers</h1>
-                <p class="lead">
+                <p class="lead md-5">
                     <bold>What could we do for you today</bold>
                 </p>
             </div>
             <!--Preloading the table menu from the server-->
-            <div id="result" class="col-lg-12 order-1 mb-5"></div>
+            <div id="result" class="col-lg-8 order-1 md-5"></div>
+           
 
-            <div class="col-lg-4 order-2 mb-5">
+            <div class="col-lg-4 order-2 centered">
+                 <form>
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">&euro;</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <input type="checkbox" id="showDelivery" aria-label="Checkbox for following text input">
+                            </div>
+                        </div>
+                        <input class="btn btn-block btn-warning mt-2" type="button" name="btnCalcBill"
+                            value="Calculate Total" id="calcBill">
+                    </div>
+                </form>
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-lg-12 ">
                         <div class="form-outline">
