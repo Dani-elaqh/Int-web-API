@@ -78,6 +78,14 @@ router.post('/post/json', function (req, res) {
 
 });
 
+//Middleware writes sanitized data to rq.autosan, this code comes from https://antoniormrzz.medium.com/automatic-and-painless-sanitization-for-all-express-routes-ae24cbe653c8
+//app.use(express.json());// Mount here
+//app.use(expAutoSan.all);app.post('/', (req, res, next) => {
+  //req is automatically sanitized, as middleware is used for all routes
+  //doYourStuff(req.autosan.body);
+  //res.render("pagewithtrusteddata");
+//});
+
 router.post('/post/delete', function (req, res) {
 
     function deleteJSON(obj) {
