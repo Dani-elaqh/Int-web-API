@@ -5,6 +5,8 @@ var http = require('http'), //This module provides the HTTP server functionaliti
     xmlParse = require('xslt-processor').xmlParse, //This module allows us to work with XML files
     xsltProcess = require('xslt-processor').xsltProcess, //The same module allows us to utilise XSL Transformations
     xml2js = require('xml2js'); //This module does XML to JSON conversion and also allows us to get from JSON back to XML
+    const expAutoSan = require('express-autosanitizer');//Sanitasing express
+    const app= express()
 
 var router = express(); //We set our routing to be handled by Express
 var server = http.createServer(router); //This is where our server gets created
@@ -77,14 +79,32 @@ router.post('/post/json', function (req, res) {
     res.redirect('back');
 
 });
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict';
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation');
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
 //Middleware writes sanitized data to rq.autosan, this code comes from https://antoniormrzz.medium.com/automatic-and-painless-sanitization-for-all-express-routes-ae24cbe653c8
-//app.use(express.json());// Mount here
-//app.use(expAutoSan.all);app.post('/', (req, res, next) => {
+// and also from https://flaviocopes.com/express-sanitize-input/ 
+app.use(express.json());
+app.use(expAutoSan.all);app.post('/', (req, res, next) => {
   //req is automatically sanitized, as middleware is used for all routes
-  //doYourStuff(req.autosan.body);
-  //res.render("pagewithtrusteddata");
-//});
+  doYourStuff(req.autosan.body);
+  res.render("pagewithtrusteddata");
+});
 
 router.post('/post/delete', function (req, res) {
 

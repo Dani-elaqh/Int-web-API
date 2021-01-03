@@ -1,7 +1,7 @@
 // This function is in case the prodcut can be delivered
-// items (depending on the value of bShowVeg)
-function highlightVegetarian(idTable, bShowVeg) {
-    // if bShowVeg is true, then we're show delivery, if not nothing to show
+// items (depending on the value of bShowDel)
+function highlightDelivery(idTable, bShowDel) {
+    // if bShowDel is true, then we're show delivery, if not nothing to show
     var i = 0;
     var oTable = document.getElementById(idTable);
     var oTBODY = oTable.getElementsByTagName('TBODY')[0];
@@ -9,7 +9,7 @@ function highlightVegetarian(idTable, bShowVeg) {
     // going to all of the rows to check in case the delivery attribute is there 
     for (i = 0; i < aTRs.length; i++) {
         if (aTRs[i].getAttribute('delivery') && aTRs[i].getAttribute('delivery') == "true") {
-            if (bShowVeg) {
+            if (bShowDel) {
                 aTRs[i].style.backgroundColor = "lightGreen";
             } else {
                 aTRs[i].style.backgroundColor = "";
@@ -30,6 +30,6 @@ function getParentTag(oNode, sParentType) {
 };
 window.addEventListener("load", function () {
     document.querySelector("#showDelivery").addEventListener("click", function () {
-        highlightVegetarian('menuTable', this.checked);
+        highlightDelivery('menuTable', this.checked);
     });
 });
