@@ -53,11 +53,65 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Welcome to Rocking Groomers</h1>
-                <p class="lead"><bold>What could we do for you today</bold></p>
+                <p class="lead">
+                    <bold>What could we do for you today</bold>
+                </p>
             </div>
             <!--Preloading the table menu from the server-->
-            <div id="result" class="col-lg-12">
+            <div id="result" class="col-lg-12 order-1 mb-5"></div>
 
+            <div class="col-lg-4 order-2 mb-5">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-lg-12 ">
+                        <div class="form-outline">
+                            <input type="text" class="form-control" id="validationCustom01" value="Mark" required />
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-outline">
+                            <input type="text" class="form-control" id="validationCustom02" value="Otto" required />
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-group form-outline">
+                            <span class="input-group-text" id="inputGroupPrepend">Phone</span>
+                            <input type="text" class="form-control" id="validationCustomUsername"
+                                aria-describedby="inputGroupPrepend" required />
+                            <label for="validationCustomUsername" class="form-label">Mobile </label>
+                            <div class="invalid-feedback">Please insert your phone number</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-outline">
+                            <input type="text" class="form-control" id="validationCustom03" required />
+                            <label for="validationCustom03" class="form-label">Address</label>
+                            <div class="invalid-feedback">Please provide a valid address.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-outline">
+                            <input type="text" class="form-control" id="validationCustom05" required />
+                            <label for="validationCustom05" class="form-label">Zip</label>
+                            <div class="invalid-feedback">Please provide a valid zip.</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">You must agree before submitting.</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-danger" type="submit">Submit order </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -65,7 +119,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
                 <h3><a href="#">Rocking Groomers</a></h3>
-                <p class="links"><a href="#">Join Us</a><strong> · </strong><a href="#"></a><strong> ·  · </strong></p>
+                <p class="links"><a href="#">Join Us</a><strong> · </strong><a href="#"></a><strong> · · </strong></p>
                 <p class="company-name">Rocking Groomers</p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
@@ -82,8 +136,14 @@
             <div class="clearfix"></div>
             <div class="col-md-4 footer-about">
                 <h4>About the Rocking Groomers</h4>
-                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p>
-                <div class="social-links social-icons"><a href="img/facebook-social-media-icon-design-template-vector-png_126986.jpg"><i class="fa fa-facebook"></i></a><a href="img/Twitter-Logo.png"><i class="fa fa-twitter"></i></a><a href="img/png-transparent-social-media-linkedin-computer-icons-logo-facebook-shelf-drum-blue-text-rectangle-thumbnail.png"><i class="fa fa-linkedin"></i></a></div>
+                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor
+                    lacus vehicula sit amet. </p>
+                <div class="social-links social-icons"><a
+                        href="img/facebook-social-media-icon-design-template-vector-png_126986.jpg"><i
+                            class="fa fa-facebook"></i></a><a href="img/Twitter-Logo.png"><i
+                            class="fa fa-twitter"></i></a><a
+                        href="img/png-transparent-social-media-linkedin-computer-icons-logo-facebook-shelf-drum-blue-text-rectangle-thumbnail.png"><i
+                            class="fa fa-linkedin"></i></a></div>
             </div>
         </div>
     </footer>
@@ -92,6 +152,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

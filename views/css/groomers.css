@@ -1,6 +1,6 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(129, 127, 127, 0.24);
+    background-color: rgba(255, 255, 255, 0.39);
     margin: 5px;
     text-align: left;
     color: #ecc823;
@@ -16,19 +16,21 @@ p {
     font-weight: bolder;
 }
 table {
-    background-color: rgba(236, 219, 243, 0.24);
-    border-color: #28badfdc;
-    border-width: thick;
+    background-color: rgba(255, 255, 255, 0.39);
+    border-color: #fafafa00;
+    border-width: thin;
     border-collapse: collapse;
     width: 75%;
+     border-radius:6px;
+    -moz-border-radius:6px;
 }
 th {
-    border-color: #2b28dfb7;
+    border-color: #b3afafdc;
     font-size: 120%;
     color: rgb(25, 99, 133);
 }
 td {
-    border-color: #2b28dfb7;
+    border-color: #b3afafdc;
     font-size: 100%;
     color: rgb(25, 99, 133);
     padding: 5px;
