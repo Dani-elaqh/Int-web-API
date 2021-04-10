@@ -54,80 +54,25 @@
                     <bold>What could we do for you today</bold>
                 </p>
             </div>
-            <!--Preloading the table menu from the server-->
+            <!--Injecting the table menu from the server-->
             <div id="result" class="col-lg-8 order-1 md-5"></div>
-           
-
-            <div class="col-lg-4 order-2 centered">
-                 <form>
-                    <div class="input-group mb-4">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">&euro;</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <input type="checkbox" id="showDelivery" aria-label="Checkbox for following text input">
-                            </div>
-                        </div>
-                        <input class="btn btn-block btn-warning mt-2" type="button" name="btnCalcBill"
-                            value="Calculate Total" id="calcBill">
-                    </div>
-                </form>
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-lg-12 ">
-                        <div class="form-outline">
-                            <input type="text" class="form-control" id="validationCustom01" value="" required />
-                            <label for="validationCustom01" class="form-label">First name</label>
-                            <div class="valid-feedback">Looks good!</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-outline">
-                            <input type="text" class="form-control" id="validationCustom02" value="" required />
-                            <label for="validationCustom02" class="form-label">Last name</label>
-                            <div class="valid-feedback">Looks good!</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="input-group form-outline">
-                            <span class="input-group-text" id="inputGroupPrepend">Phone</span>
-                            <input type="text" class="form-control" id="validationCustomUsername"
-                                aria-describedby="inputGroupPrepend" required />
-                            <label for="validationCustomUsername" class="form-label">Mobile </label>
-                            <div class="invalid-feedback">Please insert your phone number</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-outline">
-                            <input type="text" class="form-control" id="validationCustom03" required />
-                            <label for="validationCustom03" class="form-label">Address</label>
-                            <div class="invalid-feedback">Please provide a valid address.</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-outline">
-                            <input type="text" class="form-control" id="validationCustom05" required />
-                            <label for="validationCustom05" class="form-label">Eircode</label>
-                            <div class="invalid-feedback">Please provide a valid Eircode.</div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                            <label class="form-check-label" for="invalidCheck">
-                                Agree to terms and conditions
-                            </label>
-                            <div class="invalid-feedback">You must agree before submitting.</div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit order </button>
-                        <button id="delete" class="btn btn-danger" type="submit">Delete </button>
-                        <p class="text-muted">Please click the row you would like to delete</p>
+            <div class="col-lg-4 order-2">
+                <form enctype="application/json" action="/post/json" method="post">
+                    <div class="form-group">
+                        <select class="form-control" name="sec_n">
+                            <option value="0">Wash and Blowdry</option>
+                            <option value="1">Paws and hair</option>
+                            <option value="2">Toys and food</option>
+                            <option value="3">Other services</option>
+                        </select>
+                        <input class="form-control mt-3" type="text" name="item" placeholder="Service">
+                        <input class="form-control mt-3" type="text" name="price" placeholder="Price">
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Add</button>
                         
                     </div>
                 </form>
+                
+                </div>
             </div>
         </div>
     </div>

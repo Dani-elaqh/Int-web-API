@@ -57,7 +57,7 @@ router.get('/get/html', function(req, res) {
     res.end(result.toString()); //Send the result back to the user, but convert to type string first
 
 });
-
+//function post , sending information XMl file, end point post json. jsToxml converts and writes the new add service to the XMl file
 router.post('/post/json', function (req, res) {
 
     function appendJSON(obj) {
@@ -67,7 +67,7 @@ router.post('/post/json', function (req, res) {
         xmlFileToJs('RockingGroomers.xml', function (err, result) {
             if (err) throw (err);
             
-            result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
+            result.groomingservice.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
