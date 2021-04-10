@@ -16,6 +16,7 @@ function draw_table(){
     //calling 
     $.getJSONuncached("/get/html")
 };
+//click any room and highlight the row, as selected, taking selection and entree coming from the id
 function select_row()
 {
 	$("#menuTable tbody tr[id]").click(function ()
@@ -27,7 +28,7 @@ function select_row()
 		delete_row(section, entree);
 	})
 };
-
+//are end point passing 2 variable section number and entree number
 function delete_row(sec, ent)
 {
 	$("#delete").click(function ()
@@ -46,6 +47,7 @@ function delete_row(sec, ent)
 		})
 	})
 };
+//calling the code when loading the page
 $(document).ready(function(){
-    draw_table(); //calling the code when opening the page
-})
+    draw_table(); 
+});
