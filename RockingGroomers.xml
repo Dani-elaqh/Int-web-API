@@ -1,59 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <groomingservice>
-  <section name="Wash and Blowdry">
-    <entree>
-      <item>Wash and blowdry - Medium size dog</item>
-      <price>55.96</price>
-    </entree>
-    <entree>
-      <item>Wash and blowdry - Big size dog</item>
-      <price>105.00</price>
-    </entree>
-  </section>
-  <section name="Paws and hair">
-    <entree>
-      <item>Mosturize paws</item>
-      <price>15.95</price>
-    </entree>
-    <entree>
-      <item>Cut and style hair</item>
-      <price>75.90</price>
-    </entree>
-  </section>
-  <section name="Toys and food">
-    <entree delivery="true">
-      <item>Squeaky Chicken</item>
-      <price>2.97</price>
-    </entree>
-    <entree delivery="true">
-      <item>Squeaky Giraffe</item>
-      <price>2.93</price>
-    </entree>
-    <entree delivery="true">
-      <item>Lighting bouncing balls</item>
-      <price>4.97</price>
-    </entree>
-    <entree delivery="true">
-      <item>Royal Canin Cocker</item>
-      <price>14.96</price>
-    </entree>
-    <entree delivery="true">
-      <item>Royal Maxi Adult 15 Kg</item>
-      <price>74.98</price>
-    </entree>
-    <entree delivery="true">
-      <item>Royal Canin French Bulldog</item>
-      <price>14.95</price>
-    </entree>
-  </section>
-  <section name="Other Services">
-    <entree>
-      <item>Dog Walking</item>
-      <price>10.50</price>
-    </entree>
-    <entree>
-      <item>Hotel Dog</item>
-      <price>45.95</price>
-    </entree>
-  </section>
+    <section name="Wash and Blowdry">
+        <entree>
+            <item>Wash and blowdry - Small size dog</item>
+            <price>45.90</price>
+        </entree>
+        <entree>
+            <item>Wash and blowdry - Medium size dog</item>
+            <price>55.96</price>
+        </entree>
+        <entree>
+            <item>Wash and blowdry - Big size dog</item>
+            <price>105.00</price>
+        </entree>
+    </section>
+    <section name="Paws and hair">
+        <entree>
+            <item>Mosturize paws</item>
+            <price>15.95</price>
+        </entree>
+        <entree>
+            <item>Cut and style hair</item>
+            <price>75.90</price>
+        </entree>
+    </section>
+    <section name="Toys and food">
+        <entree delivery="true">
+            <item>Squeaky Chicken</item>
+            <price>2.97</price>
+        </entree>
+        <entree delivery="true">
+            <item>Squeaky Giraffe</item>
+            <price>2.93</price>
+        </entree>
+        <entree delivery="true">
+            <item>Lighting bouncing balls</item>
+            <price>4.97</price>
+        </entree>
+        <entree delivery="true">
+            <item>Royal Canin Cocker</item>
+            <price>14.96</price>
+        </entree>
+        <entree delivery="true">
+            <item>Royal Maxi Adult 15 Kg</item>
+            <price>74.98</price>
+        </entree>
+        <entree delivery="true">
+            <item>Royal Canin French Bulldog</item>
+            <price>14.95</price>
+        </entree>
+    </section>
+    <section name="Other Services">
+        <entree>
+            <item>Dog Walking</item>
+            <price>10.50</price>
+        </entree>
+        <entree>
+            <item>Hotel Dog</item>
+            <price>45.95</price>
+        </entree>
+    </section>
 </groomingservice>

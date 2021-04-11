@@ -73,6 +73,22 @@
                 </form>
                 <button id="delete" class="btn btn-danger btn-block mt-3">Remove</button>
                 <p class="text-muted">Click on the service before for deleting</p>
+
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">&euro;</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input">
+                            </div>
+                        </div>
+                        <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill"
+                            value="Calculate Bill" id="calcBill">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -115,6 +131,18 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/RockingGroomers.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.querySelector("#calcBill").addEventListener("click", function () {
+                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            });
+            document.querySelector("#showDelivery").addEventListener("click", function () {
+                highlightDelivery('menuTable', this.checked);
+            });
+        });    
+    </script>
 </body>
 
 </html>

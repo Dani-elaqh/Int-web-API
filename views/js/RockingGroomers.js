@@ -1,23 +1,5 @@
-// This function is in case the product can be delivered
-// items (depending on the value of bShowDel)
-function highlightDelivery(idTable, bShowDel) {
-    // if bShowDel is true, then we're show delivery, if not nothing to show
-    var i = 0;
-    var oTable = document.getElementById(idTable);
-    var oTBODY = oTable.getElementsByTagName('TBODY')[0];
-    var aTRs = oTBODY.getElementsByTagName('TR');
-    // going to all of the rows to check in case the delivery attribute is there 
-    for (i = 0; i < aTRs.length; i++) {
-        if (aTRs[i].getAttribute('delivery') && aTRs[i].getAttribute('delivery') == "true") {
-            if (bShowDel) {
-                aTRs[i].style.backgroundColor = "lightGreen";
-            } else {
-                aTRs[i].style.backgroundColor = "";
-            };
-        };
-    };
-};
-
+// returns a number that represents the sum of all the selected menu
+// item prices.
 function calculateBill(idMenuTable) {
     var fBillTotal = 0.0;
     var i = 0;
@@ -36,6 +18,26 @@ function calculateBill(idMenuTable) {
     // return the price as a decimal number with 2 decimal places
     return Math.round(fBillTotal * 100.0) / 100.0;
 };
+
+function highlightDelivery(idTable, bShowDelivery) {
+    // if delivery is true, then it should be highlighted
+   
+    var i = 0;
+    var oTable = document.getElementById(idTable);
+    var oTBODY = oTable.getElementsByTagName('tbody')[0];
+    var aTRs = oTBODY.getElementsByTagName('tr');
+    // walk through each of the table rows and see if there is delivery option 
+    
+    for (i = 0; i < aTRs.length; i++) {
+        if (aTRs[i].getAttribute('delivery') == "true") {
+            if (bShowDelivery) {
+                aTRs[i].style.backgroundColor = "skyblue";
+            } else {
+                aTRs[i].style.backgroundColor = "";
+            };
+        };
+    };
+};
 // Utility function for getting the parent tag of a given tag
 // but only of a certain type (i.e. a TR, a TABLE, etc.)
 function getParentTag(oNode, sParentType) {
@@ -47,8 +49,3 @@ function getParentTag(oNode, sParentType) {
     };
     return oParent;
 };
-window.addEventListener("load", function () {
-    document.querySelector("#showDelivery").addEventListener("click", function () {
-        highlightDelivery('menuTable', this.checked);
-    });
-});
