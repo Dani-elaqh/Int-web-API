@@ -2,14 +2,14 @@
 //JQuery code , only one function draw_table
 function draw_table(){
     $("#result").empty();
-    $.getJSONuncached = function(url)
+    $.getJSONuncached = function (url)
      {
         return $.ajax(
         {
             url: url,
             type: 'GET',
             cache: false,
-            success: function(html)
+            success: function (html)
             {
                 $("#result").append(html);
                 select_row();
@@ -31,7 +31,7 @@ function select_row()
 		delete_row(section, entree);
 	})
 };
-//are end point passing 2 variable section number and entree number and will only delete if clicked the button
+//our end point passing 2 variable section number and entree number and will only delete if clicked the button
 function delete_row(sec, ent)
 {
 	$("#delete").click(function ()

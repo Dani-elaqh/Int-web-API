@@ -100,7 +100,7 @@ router.post('/post/delete', function (req, res) {
         xmlFileToJs('RockingGroomers.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.cafemenu.section[obj.section].entree[obj.entree];
+            delete result.groomingservice.section[obj.section].entree[obj.entree];
 
             console.log(JSON.stringify(result, null, "  "));
 

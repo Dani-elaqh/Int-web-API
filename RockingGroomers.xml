@@ -2,10 +2,6 @@
 <groomingservice>
   <section name="Wash and Blowdry">
     <entree>
-      <item>Wash and blowdry - Small dog</item>
-      <price>35.95</price>
-    </entree>
-    <entree>
       <item>Wash and blowdry - Medium size dog</item>
       <price>55.96</price>
     </entree>
@@ -58,18 +54,6 @@
     <entree>
       <item>Hotel Dog</item>
       <price>45.95</price>
-    </entree>
-    <entree>
-      <service>Party Dog</service>
-      <price>250</price>
-    </entree>
-    <entree>
-      <service/>
-      <price>359.66</price>
-    </entree>
-    <entree>
-      <item>Birthday Party</item>
-      <price>687</price>
     </entree>
   </section>
 </groomingservice>
